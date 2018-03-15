@@ -7,7 +7,7 @@
   <link rel="stylesheet" type="text/css" href="{% static 'admin/css/forms.css' %}" />
   {{ media.css }}
   <link rel="stylesheet" type="text/css" href="{% static 'admin/css/constance.css' %}" />
- 
+
 {% endblock %}
 
 {% block extrahead %}
@@ -27,7 +27,7 @@
 {% block content %}
   <div id="content-main" class="constance">
     <div class="module" id="changelist">
-        <form id="changelist-form" action="" method="post" enctype="multipart/form-data">{% csrf_token %}
+        <form id="changelist-form" action="" method="post" enctype="multipart/form-data" novalidate>{% csrf_token %}
             {% if form.non_field_errors %}
                 <ul class="errorlist">
                     {% for error in form.non_field_errors %}
